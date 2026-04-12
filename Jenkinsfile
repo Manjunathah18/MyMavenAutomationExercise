@@ -29,7 +29,8 @@ pipeline {
         stage('Run Application') {
             steps {
                 // Start the JAR application
-                sh 'java -jar target/*.jar'
+                sh 'mvn exec:java -Dexec.mainClass="com.example.App"'
+
             }
         }
 
